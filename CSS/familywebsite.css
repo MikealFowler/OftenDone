@@ -99,6 +99,13 @@ nav ul li a:hover {
     display: block;
 }
 
+.banner-1 img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    max-height: 50px; /* Limits the height to a maximum of 400px */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {

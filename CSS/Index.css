@@ -38,7 +38,7 @@ h2 {
 
 header a {
     font-family: "Poppins", sans-serif;
-    font-size: 1.9em;
+    font-size: 3em;
     font-weight: bold;
     margin-left: 14px;
     color: #4CAF50;
@@ -84,4 +84,32 @@ footer {
 footer a {
     color: #4CAF50;
     text-decoration: none;
+}
+.banner-1 img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    max-height: 50px; /* Limits the height to a maximum of 400px */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.button {
+    background-color: #ffffff;
+    color: #4CAF50;
+    border: none; 
+    padding: 5px 10px; 
+    font-size: 20px; 
+    border: 0cap;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+
+}
+
+.button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1); /* enlarge on hover */
+}
+
+.button:active {
+    background-color: #ffffff;
+    transform: scale(0.98); /* Slightly shrink on click */
 }
