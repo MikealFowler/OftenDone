@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Shipping Banner */
+.banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid black;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.social-icons a {
+    color: black;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.cart {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+.cart span {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* Banner Image */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .header-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shipping-banner {
+        font-size: 12px;
+        padding: 8px;
+    }
+    body {
+        background-color: lightblue;
+    }
+}
