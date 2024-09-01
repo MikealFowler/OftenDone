@@ -16,16 +16,43 @@ header {
     text-align: center;
 }
 
-p {
-    margin: 0;
-    font-size: 1.2em;
+header nav ul {
+    display: flex;
+    justify-content: center; /* Center align all items */
+    padding: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    margin: 0 10px; /* Add spacing between buttons */
+}
+
+header nav ul li a {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Increase padding for better spacing */
+    border-radius: 5px; /* Add slight rounding to the buttons */
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+header nav ul li a:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+header nav ul li a:active {
+    background-color: #c0c0c0; /* Change background on click */
+    transform: scale(0.95); /* Slightly shrink on click */
 }
 
 section {
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
-    
 }
 
 h2 {
@@ -34,48 +61,11 @@ h2 {
     margin-bottom: 10px;
 }
 
-
-
-header a {
-    font-family: "Poppins", sans-serif;
-    font-size: 3em;
-    font-weight: bold;
-    margin-left: 14px;
-    color: #4CAF50;
-    justify-content: flex-start;
-    margin-top: 5px;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav > ul {
-    display: inline;
-    font-family: "Poppins", sans-serif;
-    padding-right: 15px;
-}
-
-nav > ul > li {
-    display: inline;
-    font-family: "Poppins", sans-serif;
-    padding-right: 15px;
-    color: #4CAF50;
-    font-weight: bold;
-}
-
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 1px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -92,24 +82,132 @@ footer a {
     object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
-.button {
+/* Contact Page Specific Styles */
+#contact-info {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#contact-form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#contact-form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact-info ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Services Page Specific Styles */
+#services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.service-item {
     background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
     color: #4CAF50;
-    border: none; 
-    padding: 5px 10px; 
-    font-size: 20px; 
-    border: 0cap;
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-
+    margin-top: 0;
 }
 
-.button:hover {
-    background-color: #ffffff;
-    transform: scale(1.1); /* enlarge on hover */
+.service-item p {
+    color: #333;
 }
 
-.button:active {
+@media (max-width: 800px) {
+    #services {
+        grid-template-columns: 1fr; /* Stack services on small screens */
+    }
+}
+
+/* Testimonials Page Specific Styles */
+#testimonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.testimonial-item {
     background-color: #ffffff;
-    transform: scale(0.98); /* Slightly shrink on click */
+    border-left: 4px solid #4CAF50;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.testimonial-item p em {
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    #testimonials {
+        grid-template-columns: 1fr;
+    }
 }
