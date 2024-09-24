@@ -211,3 +211,10 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+
+.container {
+    max-width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
