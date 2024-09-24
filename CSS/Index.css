@@ -1,9 +1,22 @@
+/* General Styles */
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #333;
+    font-size: 1em; /* Set base font size */
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6em;
+    padding: 0 5%; /* Ensure better readability on mobile */
 }
 
 #slogan {
@@ -18,49 +31,44 @@ header {
 
 header nav ul {
     display: flex;
-    justify-content: center; /* Center align all items */
+    justify-content: center;
     padding: 0;
 }
 
 header nav ul li {
     list-style: none;
-    margin: 0 10px; /* Add spacing between buttons */
+    margin: 0 10px;
 }
 
 header nav ul li a {
-    font-family: "Poppins", sans-serif;
     font-size: 1.5em;
     font-weight: bold;
     color: #4CAF50;
-    text-decoration: none; /* Remove underline */
-    padding: 10px 20px; /* Increase padding for better spacing */
-    border-radius: 5px; /* Add slight rounding to the buttons */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     background-color: #ffffff;
-    transition: background-color 0.3s ease, transform 0.3s ease; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background-color: #e0e0e0; /* Change background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #e0e0e0;
+    transform: scale(1.05);
 }
 
 header nav ul li a:active {
-    background-color: #c0c0c0; /* Change background on click */
-    transform: scale(0.95); /* Slightly shrink on click */
+    background-color: #c0c0c0;
+    transform: scale(0.95);
 }
 
+/* Section Styles */
 section {
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
 }
 
-h2 {
-    color: #4CAF50;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
@@ -75,22 +83,17 @@ footer a {
     color: #4CAF50;
     text-decoration: none;
 }
+
+/* Banner Image Styles */
 .banner-1 img {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    max-height: 50px; /* Limits the height to a maximum of 400px */
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
 }
 
-/* Contact Page Specific Styles */
-#contact-info {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-}
-
-#contact-form {
+/* Contact Page Styles */
+#contact-info, #contact-form {
     margin: 20px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -143,7 +146,7 @@ footer a {
     font-size: 1.2em;
 }
 
-/* Services Page Specific Styles */
+/* Services Page Styles */
 #services {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -170,13 +173,7 @@ footer a {
     color: #333;
 }
 
-@media (max-width: 800px) {
-    #services {
-        grid-template-columns: 1fr; /* Stack services on small screens */
-    }
-}
-
-/* Testimonials Page Specific Styles */
+/* Testimonials Page Styles */
 #testimonials {
     display: grid;
     grid-template-columns: 1fr;
@@ -206,14 +203,41 @@ footer a {
     margin-bottom: 10px;
 }
 
+/* Responsive Styles */
 @media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #services {
+        grid-template-columns: 1fr;
+    }
+
     #testimonials {
         grid-template-columns: 1fr;
     }
 }
 
+/* General Container for Max Width */
 .container {
-    max-width: 80%; 
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
