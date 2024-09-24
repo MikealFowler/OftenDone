@@ -12,7 +12,12 @@ h2 {
     color: #4CAF50;
     font-size: 2.5em;
     margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px; line-height: 1.6em;
+    padding: 0 5%; /* Ensure better readability on mobile */
 }
+
 
 p {
     line-height: 1.6em;
@@ -25,7 +30,7 @@ p {
 
 header {
     color: white;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 }
 
@@ -66,6 +71,9 @@ section {
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
+}
+section#bio p:last-of-type {
+    margin-bottom: 200px; /* Increase space at the bottom of the last paragraph */
 }
 
 /* Footer Styles */
